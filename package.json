@@ -1,0 +1,33 @@
+{
+  "name": "node-startup-package",
+  "version": "1.0.0",
+  "description": "Build to make node application easily",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "seed": "knex seed:run --knexfile src/knexfile.js",
+    "seed:make": "knex seed:make --knexfile src/knexfile.js",
+    "migrate:make": "knex migrate:make --knexfile src/knexfile.js",
+    "migrate:latest": "knex migrate:latest --knexfile src/knexfile.js",
+    "migrate:rollback": "knex migrate:rollback --knexfile src/knexfile.js"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "api",
+    "start-up-package"
+  ],
+  "author": "prabin",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "bookshelf": "^0.13.3",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.6",
+    "pg": "^7.6.1"
+  }
+}
